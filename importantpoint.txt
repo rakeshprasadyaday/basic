@@ -1,0 +1,2 @@
+#include<cmath.h>
+//fabs() used for absolute or modulus of two number
