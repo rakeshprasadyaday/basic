@@ -9,11 +9,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Bring some raw data.
+
 frequencies = [221,239,245,256,269,277.5]
 
-# In my original code I create a series and run on that, 
-# so for consistency I create a series from the list.
+
 freq_series = pd.Series.from_array(frequencies)
 
 x_labels = [2012,2013,2014,2015,2016,2017]
@@ -36,19 +35,14 @@ for rect in rects:
 
     # Number of points between bar and label. Change to your liking.
     space = 1
-    # Vertical alignment for positive values
-    #va = 'bottom'
-
-    # If value of bar is negative: Place label below bar
     
-    # Use Y value as label and format number with one decimal place
     label = "{:.1f}".format(y_value)
 
-    # Create annotation
+   
     plt.annotate(
-        label,                      # Use `label` as label
-        (x_value, y_value),         # Place label at end of the bar
+        label,                      
+        (x_value, y_value),         
         xytext=(0, 0),          # Vertically shift label by `space`
         textcoords="offset points", # Interpret `xytext` as offset in points
         ha='center',
-        color = 'black')               # Horizontally center label)            
+        color = 'black')                         
