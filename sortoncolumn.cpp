@@ -5,10 +5,13 @@
 #include<algorithm>
 using namespace std; 
 
-bool sizecom(const vector<int>& v1, const vector<int>& v2)
+bool sizesort(const vector<int>& v1, const vector<int>& v2)
 {
     return v1.size()<v2.size();
 }
+
+//For descending order we will use 
+//return v1.size()>v2.size();
 
 //Driver Function
 
@@ -29,7 +32,7 @@ int main()
 	    cout<<endl;
 	}
 //sort function for sorting vector on the basis of number of columns
-    sort(myVector.begin(),myVector.end(),sizecom);
+    sort(myVector.begin(),myVector.end(),sizesort);
 	
 	//Matrix after sorting the number of elements
 	cout<<"Matrix after sorting the number of elements\n";
